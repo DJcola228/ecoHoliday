@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Эко-отдых в треугольных домиках в лесу — природа, тишина, настоящий воздух. Горячий чан, баня, мангальная зона." />
+  <meta property="og:title" content="Эко-отдых в лесу" />
+  <meta property="og:image" content="image/hero_bg.jpeg" />
+  <title>Эко-отдых в лесу</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <button id="burger" aria-label="Открыть меню">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <div id="overlay"></div>
+
+  <div id="sidebar" role="dialog" aria-label="Навигация">
+    <button id="sidebar-close" aria-label="Закрыть меню">✕</button>
+    <nav>
+      <a href="#about">О нас</a>
+      <a href="#services">Услуги</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </div>
+
+  <header id="hero">
+    <div class="hero-left">
+      <div class="hero-content">
+        <h1>Отдохни в сердце леса</h1>
+        <p>Треугольные домики в лесу — природа, тишина, настоящий воздух</p>
+        <a href="#contacts" class="btn-primary">ЗАБРОНИРОВАТЬ</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img src="image/hero_bg.jpeg" alt="А-фрейм домик в лесу" />
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="about-inner">
+      <div class="about-text fade-in">
+        <h2>О нас</h2>
+        <div class="decor-line"></div>
+        <p>Мы — небольшая команда людей, влюблённых в природу. Мы создали место, куда можно приехать и просто выдохнуть.</p>
+        <br />
+        <p>Треугольные домики в лесу — это не просто жильё. Это ощущение: утренний туман, запах хвои, треск костра. Никаких городских шумов — только вы и лес.</p>
+        <br />
+        <p>Мы заботимся о каждой детали, чтобы ваш отдых был настоящим.</p>
+      </div>
+      <div class="about-img fade-in">
+        <img src="image/about.jpeg" alt="Треугольный домик в лесу" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="services-inner">
+      <div class="section-header fade-in">
+        <h2>Услуги</h2>
+        <div class="decor-line-center"></div>
+      </div>
+      <div class="services-grid">
+
+        <div class="card fade-in">
+          <div class="card-img">
+            <img src="image/service_chan.jpeg" alt="Горячий чан" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3>Горячий чан</h3>
+            <p>Погрузитесь в горячую воду под открытым небом. Чан на дровах — настоящее расслабление на природе в любое время года.</p>
+          </div>
+        </div>
+
+        <div class="card fade-in">
+          <div class="card-img">
+            <img src="image/service_banya.jpeg" alt="Небольшая баня" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3>Небольшая баня</h3>
+            <p>Уютная баня на берёзовых дровах. Настоящий пар, берёзовые веники, запах хвои — классика русской бани прямо в лесу.</p>
+          </div>
+        </div>
+
+        <div class="card fade-in">
+          <div class="card-img">
+            <img src="image/service_mangal.jpeg" alt="Мангальная зона" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3>Мангальная зона</h3>
+            <p>Оборудованная зона для барбекю и шашлыков. Мангал, дрова, стол со скамейками — всё для вечера в кругу близких.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contacts">
+    <div class="contacts-inner">
+      <div class="section-header fade-in">
+        <h2>Забронировать</h2>
+        <div class="decor-line-dark"></div>
+      </div>
+      <p class="contacts-sub fade-in">Оставьте заявку — мы свяжемся с вами в течение 15 минут</p>
+
+      <form id="booking-form" class="fade-in" novalidate>
+
+        <div class="form-group">
+          <input type="text" id="field-name" name="name" placeholder="Ваше имя" required />
+          <div class="form-error-msg" id="err-name">Пожалуйста, укажите ваше имя</div>
+        </div>
+
+        <div class="form-group">
+          <input type="tel" id="field-phone" name="phone" placeholder="+7 (___) ___-__-__" required />
+          <div class="form-error-msg" id="err-phone">Пожалуйста, укажите телефон</div>
+        </div>
+
+        <div class="form-group">
+          <input type="text" id="field-dates" name="dates" placeholder="Дата заезда — дата выезда" readonly required />
+          <div class="form-error-msg" id="err-dates">Пожалуйста, выберите период проживания</div>
+        </div>
+
+        <div class="form-group">
+          <label for="guest-value">Количество гостей</label>
+          <div class="guest-counter">
+            <button type="button" class="guest-btn" id="guest-minus">−</button>
+            <span id="guest-value">2</span>
+            <button type="button" class="guest-btn" id="guest-plus">+</button>
+          </div>
+          <input type="hidden" id="field-guests" name="guests" value="2" />
+        </div>
+
+        <div class="form-group">
+          <textarea id="field-comment" name="comment" placeholder="Ваши пожелания или вопросы" rows="3"></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">ОТПРАВИТЬ ЗАЯВКУ</button>
+      </form>
+
+      <div id="form-success">
+        Спасибо! Мы свяжемся с вами в ближайшее время.
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Эко-отдых в лесу. Все права защищены.
+  </footer>
+
+  <button id="sticky-cta">ЗАБРОНИРОВАТЬ</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ru.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/imask@7.6.1/dist/imask.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
